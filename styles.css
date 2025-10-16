@@ -44,6 +44,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding: 60px 0;
 }
 .hero .container {
   padding-top: 4rem;
@@ -78,22 +79,34 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.1);
   z-index: 1000;
 }
 #popup-container .popup-right {
   position: absolute;
   top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+  right: 1%;
+  transform: translateY(-48%);
   min-width: 320px;
   max-width: 500px;
-  background: rgba(255,255,255,0.97);
+  /* background: rgba(255,255,255,0.97); */
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 16px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.18);
   padding: 2rem;
   z-index: 1001;
   pointer-events: auto;
+  -webkit-text-fill-color: aliceblue;
+}
+.card-body{
+    background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  -webkit-text-fill-color: aliceblue;
 }
 .close-popup {
   position: absolute;
@@ -105,6 +118,7 @@ body {
   font-weight: bold;
   z-index: 1002;
 }
+
 
 /* Carousel styles in popup */
 .popup-right .carousel {
@@ -122,13 +136,27 @@ body {
   border: none;
   border-radius: 16px;
 }
-.popup-right .carousel-control-prev,
+.popup-right .carousel-control-prev{
+    filter: invert(1);
+    left: -4%;
+}
 .popup-right .carousel-control-next {
   filter: invert(1);
+  left: 88%;
+  
 }
 
 /* Footer */
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 35%;
+  width: 100%;
+  text-align: right;
+  background: #222;
+  color: white;
+  padding: 10px;
+  z-index: 1000;
   background: transparent;
 }
 
