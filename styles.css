@@ -3,7 +3,7 @@ html, body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: auto;
 }
 
 body {
@@ -11,6 +11,25 @@ body {
   width: 100vw;
   min-height: 100vh;
   position: relative;
+}
+
+#social-profile-link {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 88%;
+  right: 24px;
+  transform: translateY(-50%);
+  z-index: 1200;
+  border-radius: 90%;
+
+  
+  text-align: center;
+}
+.list-group-item{
+    background-color: rgba(60, 58, 58, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
 }
 
 /* Background video */
@@ -37,22 +56,41 @@ body {
 .navbar .nav-link {
   color: rgba(255,255,255,0.9);
 }
+.navbar{
+    background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
 
 /* Hero section */
 .hero {
   min-height: 60vh;
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: flex-start;
   padding: 60px 0;
 }
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem); /* grows/shrinks with screen size */
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 90%;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.hero .btn {
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
 .hero .container {
-  padding-top: 4rem;
+  padding-top: 1rem;
   padding-bottom: 4rem;
 }
 .name-typing {
   color: #fff;
-  font-size: 2rem;
+  font-size: 30%;
   letter-spacing: 1px;
   border-right: 2px solid #fff;
   white-space: nowrap;
@@ -106,8 +144,13 @@ body {
   -webkit-backdrop-filter: blur(10px);
   border-radius: 16px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.18);
-  -webkit-text-fill-color: aliceblue;
+  -webkit-text-fill-color:black;
 }
+#contact{
+    -webkit-text-fill-color: black;
+}
+
+
 .close-popup {
   position: absolute;
   top: 12px;
@@ -158,6 +201,7 @@ footer {
   padding: 10px;
   z-index: 1000;
   background: transparent;
+  font-size: 60%;
 }
 
 /* Responsive tweaks */
