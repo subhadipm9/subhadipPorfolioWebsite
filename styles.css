@@ -1,0 +1,30 @@
+/* Global */
+html,body{height:100%;}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0;}
+
+/* Background video full screen */
+#bg-video{position:fixed; right:0; bottom:0; min-width:100%; min-height:100%; width:auto; height:auto; z-index:-2; object-fit:cover;}
+.video-overlay{position:fixed; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6)); z-index:-1;}
+
+/* Hero */
+.hero{min-height:80vh; display:flex; align-items:center; justify-content:center;}
+.hero .container{padding-top:6rem; padding-bottom:6rem;}
+
+/* Sections */
+section{position:relative;}
+section .card{border-radius:12px;}
+
+/* Project cards */
+.project-card{background:rgba(255,255,255,0.85); border:0;}
+
+/* Navbar tweaks */
+.navbar-brand{letter-spacing:1px;}
+.navbar .nav-link{color:rgba(255,255,255,0.9);} 
+
+/* Footer */
+footer{background:transparent;}
+
+/* Responsive tweaks */
+@media (max-width:768px){
+  .hero .container{padding-top:4rem; padding-bottom:4rem;}
+}
