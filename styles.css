@@ -23,7 +23,7 @@ body {
     transform: translate(213%, -115%);
     z-index: 1;
     text-align: center;
-    position: fixed;
+    position: fixed; 
     color: white;
 }
 
