@@ -44,6 +44,7 @@ body {
   }
 }
 
+
 /* ✅ Mobile screens (below 480px) */
 @media (max-width: 480px) {
   .weather-card {
