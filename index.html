@@ -49,6 +49,8 @@
         </div>
       </div>
     </nav>
+    <div class="main-content">
+    <div class="hero-weather-row">
     <header class="hero d-flex align-items-left">
       <div class="container text-left text-white">
         <h1 class="display-4 fw-bold name-typing" id="typed-name"></h1>
@@ -67,6 +69,26 @@
         <a href="#contact" class="btn btn-outline-light btn-lg section-link" data-section="contact">Get in Touch</a>
       </div>
     </header>
+    <div class="weather-card">
+			<h3>
+				Weather
+			</h3>
+			<input type="text" id="city-input"
+				placeholder="Enter city name">
+        <br>
+			<button class="btn btn-outline-warning" id="city-input-btn">
+					Get Weather
+			</button>
+			<div id="weather-info"
+				class="animate__animated animate__fadeIn">
+				<h3 id="city-name"></h3>
+				<p id="date"></p>
+				<img id="weather-icon" src="" alt="Weather Icon">
+				<p id="temperature"></p>
+				<p id="description"></p>
+				<p id="wind-speed"></p>
+			</div>
+      </div>
     <div id="popup-container"></div>
     <section id="about" class="d-none">
       <h2>About Me</h2>
@@ -162,26 +184,45 @@
         <button class="btn btn-outline-warning">Send</button>
       </form>
     </section>
-		<div class="weather-card">
-			<h3>
-				Weather
-			</h3>
-			<input type="text" id="city-input"
-				placeholder="Enter city name">
-        <br>
-			<button class="btn btn-outline-warning" id="city-input-btn">
-					Get Weather
-			</button>
-			<div id="weather-info"
-				class="animate__animated animate__fadeIn">
-				<h3 id="city-name"></h3>
-				<p id="date"></p>
-				<img id="weather-icon" src="" alt="Weather Icon">
-				<p id="temperature"></p>
-				<p id="description"></p>
-				<p id="wind-speed"></p>
-			</div>
 		</div>
+
+    <h3 class="work-exp-heading scroll-animate">Work Experience</h3>
+  <section id="work-experience-section" class="d-flex justify-content-center align-items-center">
+  <div class="work-exp-col left-exp">
+    <div class="work-exp-card">
+      <h5>Juniour Software Engineer</h5>
+      <p><strong>Cognizant Technology Solutions</strong><br>December 2024 - Present<br>Worked on Java, SpringBoot, Microservices, Entra Authentication and DevOps</p>
+    </div>
+    <div class="work-exp-card">
+      <h5>Software Engineer Trainee</h5>
+      <p><strong>Cognizant Technology Solutions</strong><br>December 2023 - December 2024<br>Worked as DevOps enginner, Automation Enginner, reduced 32 PDs for the team.</p>
+    </div>
+  </div>
+  <div class="dev-img-col">
+    <img src="/resources/developer_with_pc.png" alt="Developer" class="dev-img">
+      <img src="/resources/logo_java.png" class="dev-logo dev-logo-java" alt="Java">
+  <img src="/resources/logo_spring.png" class="dev-logo dev-logo-spring" alt="Spring Boot">
+  <img src="/resources/logo_js.png" class="dev-logo dev-logo-js" alt="JavaScript">
+  <img src="/resources/logo_html.png" class="dev-logo dev-logo-html" alt="HTML">
+  <img src="/resources/logo_css.png" class="dev-logo dev-logo-css" alt="CSS">
+    <img src="/resources/logo_devops.png" class="dev-logo dev-logo-devops" alt="DevOps">
+  <img src="/resources/logo_powershell.png" class="dev-logo dev-logo-powershell" alt="PowerShell">
+  <img src="/resources/logo_aws.png" class="dev-logo dev-logo-aws" alt="AWS">
+  <img src="/resources/logo_sql.png" class="dev-logo dev-logo-sql" alt="SQL">
+  <img src="/resources/logo_github.png" class="dev-logo dev-logo-git" alt="Git">
+  </div>
+  <div class="work-exp-col right-exp">
+    <div class="work-exp-card">
+      <h5>BasketHunt Pvt Ltd - IT and Web Development Intern</h5>
+      <p><strong>Remote</strong><br>September 2023 - November 2023<br>Delivered custom web solutions for small businesses and helped the bussiness to grow.</p>
+    </div>
+    <div class="work-exp-card">
+      <h5>Management Student Volunteer</h5>
+      <p><strong>IEI Stdent Chapter of AEIE-EIE Dept.</strong><br>2022 - 2023<br>Contributing to event planning, member engagement, and professional development initiatives—enhancing my leadership and teamwork skills.</p>
+    </div>
+  </div>
+</section>
+</div>
     <footer class="py-4 text-center text-white">
       <div class="container">
         <small>&copy; 2025 Subhadip Mandal | All rights reserved</small>
@@ -243,6 +284,22 @@
     const cityName = document.getElementById('city-input').value;
     weatherFn(cityName);
     });
+    // Work exp heading
+  document.addEventListener("DOMContentLoaded", function() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible'); // Remove visible when out of view
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.scroll-animate').forEach(el => {
+    observer.observe(el);
+  });
+});
     </script>
   </body>
 </html>
